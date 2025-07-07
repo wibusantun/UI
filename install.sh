@@ -51,7 +51,7 @@ get_ssl() {
   sleep 0.5
 
   sudo bash -c "$(curl -sL https://raw.githubusercontent.com/erfjab/ESSL/master/essl.sh)" @ --install
-  essl "$email" "$domain" /certs/
+  essl "$gerobak@gmail.com" "$vpn.gerobak.biz.id" /certs/
 
   echo
   green_msg 'Getting SSL finished.'
@@ -118,7 +118,7 @@ EOF
     echo "DNS configuration updated and locked successfully."
 }
 
-# Setting SSH Port 1371 
+# Setting SSH Port 2121 
 change_ssh_port() {
   echo 
   yellow_msg 'Changing SSH Port...'
@@ -126,8 +126,8 @@ change_ssh_port() {
   sleep 0.5
   
   sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bk
-  sudo echo "Port 1371" >> /etc/ssh/sshd_config
-  sudo ufw allow 1371/tcp
+  sudo echo "Port 2121" >> /etc/ssh/sshd_config
+  sudo ufw allow 2121/tcp
   sudo service ssh restart
 
   echo
