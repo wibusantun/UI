@@ -43,22 +43,6 @@ update_upgrade() {
   sleep 0.5
 }
 
-# Get SSL
-get_ssl() {
-  echo 
-  yellow_msg 'Getting SSL...'
-  echo 
-  sleep 0.5
-
-  sudo bash -c "$(curl -sL https://raw.githubusercontent.com/erfjab/ESSL/master/essl.sh)" @ --install
-  essl gerobak@gmail.com vpn.gerobak.biz.id /certs/
-
-  echo
-  green_msg 'Getting SSL finished.'
-  echo 
-  sleep 0.5
-}
-
 # Install OpenResty
 install_openresty() {
   echo
@@ -147,7 +131,6 @@ reboot() {
 }
 
 update_upgrade
-get_ssl
 install_openresty
 openresty_prerequisites
 change_ssh_port
