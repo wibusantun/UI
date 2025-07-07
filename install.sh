@@ -107,9 +107,9 @@ dns_configuration() {
     # Create a new /etc/resolv.conf file with the specified data
     cat <<EOF > /etc/resolv.conf
 nameserver 1.1.1.1
-nameserver 1.0.0.1
+nameserver 8.8.8.8
 nameserver 2606:4700:4700::1111
-nameserver 2606:4700:4700::1001
+nameserver 2001:4860:4860::8888
 EOF
 
     # Make /etc/resolv.conf immutable
