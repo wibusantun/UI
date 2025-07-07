@@ -120,19 +120,8 @@ change_ssh_port() {
   sleep 0.5
 }
 
-# Reboot
-reboot() {
-  echo 
-  yellow_msg 'Reboot in 3 Seconds...'
-  echo 
-  sleep 3
-  
-  shutdown -r 0 
-}
-
 update_upgrade
 install_openresty
 openresty_prerequisites
 change_ssh_port
 dns_configuration
-reboot
