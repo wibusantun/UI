@@ -51,7 +51,7 @@ get_ssl() {
   sleep 0.5
 
   sudo bash -c "$(curl -sL https://raw.githubusercontent.com/erfjab/ESSL/master/essl.sh)" @ --install
-  essl "$email" "$domain" /certs/
+  essl gerobak@gmail.com vpn.gerobak.biz.id /certs/
 
   echo
   green_msg 'Getting SSL finished.'
