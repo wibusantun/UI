@@ -68,11 +68,6 @@ openresty_prerequisites(){
   yellow_msg 'OpenResty prerequisites...'
   echo 
 
-  sudo mkdir -p /var/www/html
-  sudo wget "https://github.com/zoheirkabuli/soon-site/releases/download/v1.0.4/web.zip"
-  unzip web.zip -d /var/www/html/
-  sudo mv /var/www/html/out/* /var/www/html/
-  sudo rm web.zip
   cp /etc/openresty/nginx.conf /etc/openresty/nginx.conf.bak
   rm -f /etc/openresty/nginx.conf
   curl -fsSL "https://raw.githubusercontent.com/wibusantun/UI/refs/heads/main/nginx.conf" -o "/etc/openresty/nginx.conf"
