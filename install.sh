@@ -91,7 +91,7 @@ openresty_prerequisites(){
   sudo rm web.zip
   cp /etc/openresty/nginx.conf /etc/openresty/nginx.conf.bak
   rm -f /etc/openresty/nginx.conf
-  curl -fsSL "https://raw.githubusercontent.com/zoheirkabuli/x-ui-advanced/refs/heads/main/nginx.conf" -o "/etc/openresty/nginx.conf"
+  curl -fsSL "https://raw.githubusercontent.com/wibusantun/UI/refs/heads/main/nginx.conf" -o "/etc/openresty/nginx.conf"
 
   echo
   green_msg 'OpenResty prerequisites installed.'
